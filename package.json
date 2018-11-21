@@ -1,0 +1,11 @@
+{
+  "name": "odoNet",
+  "version": "0.0.1",
+  "description": "This is a odoNet Application",
+  "scripts": {
+    "start": "node  app.js"
+  },
+  "devDependencies": {
+    "express": "4.14.0"
+  }
+}

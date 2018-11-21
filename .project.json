@@ -1,0 +1,8 @@
+{
+  "codeCheckingTriggers": {
+    "notifyBeforePush": true,
+    "notifyBeforePushLevel": "Error",
+    "blockPush": true,
+    "blockPushLevel": "Error"
+  }
+}

@@ -1,0 +1,98 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="odoNet.controller.ReadingDetails">
+	<sap.m.semantic:DetailPage xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.m.semantic="sap.m.semantic" title="{i18n>_titleReadingDetails}" id="pageAssets">
+		<sap.m.semantic:subHeader>
+			<Bar id="__bar0">
+				<contentMiddle>
+					<Title width="100%" id="__titleSubHeader"/>
+				</contentMiddle>
+			</Bar>
+		</sap.m.semantic:subHeader>
+	<sap.m.semantic:content>
+	    <sap.uxap:ObjectPageHeader xmlns:sap.uxap="sap.uxap" id="__headerReading" isObjectIconAlwaysVisible="true" objectTitle="{i18n>_objectHeaderTitleReading}">
+	    </sap.uxap:ObjectPageHeader><sap.uxap:ObjectPageHeaderContent xmlns:sap.uxap="sap.uxap" id="__contentReadingHeader"><sap.uxap:content><ObjectAttribute id="__attributeReadingVehicleID" title="{Readings>/selectedReading/VehicleID}" text="{Readings>/selectedReading/Reading}"/></sap.uxap:content>
+	    </sap.uxap:ObjectPageHeaderContent>
+	    <IconTabBar id="__barReading">
+	        <items>
+	            <IconTabFilter text="{i18n>_labelReadingDetails}" icon="sap-icon://edit" iconColor="Neutral" id="__filterDetails" key="Details">
+	                <content>
+	                    <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form0">
+	                        <sap.ui.layout.form:formContainers>
+	                            <sap.ui.layout.form:FormContainer id="__containerReading">
+	                                <sap.ui.layout.form:formElements>
+	                                    <sap.ui.layout.form:FormElement id="__elementReadingVehicleID" label="{i18n>_labelReadingVehicleID}">
+	                                        <sap.ui.layout.form:fields>
+	                                            <Input width="100%" id="__inputReadingVehicleID" value="{Readings>/selectedReading/VehicleID}" placeholder="{i18n>_labelIDPlaceholder}" tooltip="{i18n>_labelVehicleIDPlaceholder}" editable="false"/>
+	                                        </sap.ui.layout.form:fields>
+	                                    </sap.ui.layout.form:FormElement>
+	                                    <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.m.semantic="sap.m.semantic" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="{i18n>_labelReading}" id="__elementReadingReading">
+	                                        <sap.ui.layout.form:fields>
+	                                            <Input width="100%" id="__inputReadingReading" value="{Readings>/selectedReading/Reading}"/>
+	                                            
+	                                        </sap.ui.layout.form:fields>
+	                                        
+	                                    </sap.ui.layout.form:FormElement>
+	                                    <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.m.semantic="sap.m.semantic" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="{i18n>_labelReadingCreationDate}" id="__elementReadingCreationDate">
+	                                        <sap.ui.layout.form:fields>
+	                                            <Input width="100%" id="__inputReadingCreationDate" value="{Readings>/selectedReading/CreationDate}"/>
+	                                            
+	                                        </sap.ui.layout.form:fields>
+	                                        
+	                                    </sap.ui.layout.form:FormElement>
+
+	                                </sap.ui.layout.form:formElements>
+	                            </sap.ui.layout.form:FormContainer>
+	                        </sap.ui.layout.form:formContainers>
+	                        <sap.ui.layout.form:layout>
+	                            <sap.ui.layout.form:ResponsiveGridLayout id="__layout0"/>
+	                        </sap.ui.layout.form:layout></sap.ui.layout.form:Form>
+	                </content>
+	            </IconTabFilter>
+	            <IconTabFilter icon="sap-icon://create" iconColor="Neutral" id="__filterNew" text="{i18n>_labelReadingAdd}" key="New">
+	                <content>
+	                    <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form1">
+	                        <sap.ui.layout.form:formContainers>
+	                            <sap.ui.layout.form:FormContainer id="__containerNewReading">
+	                                <sap.ui.layout.form:formElements>
+	                                    <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.m.semantic="sap.m.semantic" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="__elementNewReadingVehicleID" label="{i18n>_labelReadingVehicleID}">
+	                                        <sap.ui.layout.form:fields>
+	                                            <Input xmlns="sap.m" width="100%" id="__inputNewReadingVehicleID" value="{Readings>/newReading/VehicleID}" placeholder="{i18n>_labelIDPlaceholder}" tooltip="{i18n>_labelVehicleIDPlaceholder}"/>
+	                                            
+	                                        </sap.ui.layout.form:fields>
+	                                        
+	                                    </sap.ui.layout.form:FormElement>
+	                                    <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.m.semantic="sap.m.semantic" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="{i18n>_labelReading}" id="__elementNewReadingReading">
+	                                        <sap.ui.layout.form:fields>
+	                                            <Input width="100%" id="__inputNewReadingReading" value="{Readings>/newReading/Reading}"/>
+	                                            
+	                                        </sap.ui.layout.form:fields>
+	                                        
+	                                    </sap.ui.layout.form:FormElement>
+	                                    <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.m.semantic="sap.m.semantic" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="{i18n>_labelReadingCreationDate}" id="__elementNewCoffReadingCreationDate">
+	                                        <sap.ui.layout.form:fields>
+	                                            <Input width="100%" id="__inputNewReadingCreationDate" value="{Readings>/newReading/CreationDate}"/>
+	                                            
+	                                        </sap.ui.layout.form:fields>
+	                                        
+	                                    </sap.ui.layout.form:FormElement>
+
+	                                    </sap.ui.layout.form:formElements>
+	                                
+	                            </sap.ui.layout.form:FormContainer>
+	                            
+	                        </sap.ui.layout.form:formContainers>
+	                        <sap.ui.layout.form:layout>
+	                            <sap.ui.layout.form:ResponsiveGridLayout id="__layout1"/>
+	                            
+	                        </sap.ui.layout.form:layout>
+	                        </sap.ui.layout.form:Form>
+	                    <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.m.semantic="sap.m.semantic" xmlns="sap.m" width="100px" id="__buttonAddReading" text="{i18n>_buttonAddReading}" type="Emphasized" press="addNew"/>
+	                </content>
+	            </IconTabFilter></items>
+	    </IconTabBar>
+	    
+	</sap.m.semantic:content>
+	<sap.m.semantic:positiveAction>
+	    <sap.m.semantic:PositiveAction text="{i18n>_buttonUpdateReading}" id="__actionUpdateReading" press="update"/>
+	</sap.m.semantic:positiveAction>
+	</sap.m.semantic:DetailPage>
+</mvc:View>

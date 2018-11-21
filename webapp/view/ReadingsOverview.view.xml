@@ -1,0 +1,23 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="odoNet.controller.ReadingsOverview">
+	<sap.m.semantic:MasterPage xmlns:sap.m.semantic="sap.m.semantic" id="pageAssets" title="{i18n>_titleReadingsList}" showSubHeader="false" showNavButton="true" navButtonPress="onNavBack">
+		<sap.m.semantic:content>
+			<SearchField xmlns="sap.m" width="100%" placeholder="{i18n>_searchPlaceholder}" id="_searchReading" search="onSearch" value="{Readings>/searchReadingID}"/>
+			<List id="readingsList" items="{Readings>/readingCollection/items}" noDataText="{i18n>_labelNoReadingsText}" mode="SingleSelectMaster" growing="true" growingScrollToLoad="true" selectionChange="onSelectionChange">
+					<items>
+						<StandardListItem title="{Readings>VehicleID}" type="Navigation" description="{Readings>CreationDate}" id="Reading" press="onSelectionChange" detailPress="onSelectionChange" info="{Readings>Reading}" icon="sap-icon://car-rental"/>
+					</items>
+			</List>			
+		</sap.m.semantic:content>
+		<sap.m.semantic:positiveAction>
+	    	<sap.m.semantic:PositiveAction text="+" id="__actionAddNewReading" press="onAdd"/>
+		</sap.m.semantic:positiveAction>
+		<sap.m.semantic:negativeAction>
+		    <sap.m.semantic:NegativeAction text="-" id="__actionRemoveAllReadings" press="onRemoveAll"/>
+		</sap.m.semantic:negativeAction>	
+		
+	<sap.m.semantic:customFooterContent>
+	    <Button width="75px" id="__buttonMessagePopOver" icon="sap-icon://message-popup" type="Emphasized" press="onMessagePress" text="{Messages>/messageCount}"/>
+	</sap.m.semantic:customFooterContent>
+	
+	</sap.m.semantic:MasterPage>
+</mvc:View>

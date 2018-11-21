@@ -1,0 +1,46 @@
+{
+	"instanceName": "ws-dev",
+	"serviceKey": {
+		"type": "oAuthBearerToken",
+		"clientId":"sb-263ffff9-703a-4173-adfd-152abc81a2bb!b6199|na-420adfc9-f96e-4090-a650-0386988b67e0!b1836",
+		"clientSecret":"VtPmByNGs35u8XFrH/VarutaHBg=",
+		"tokenUrl":"https://d052779trial.authentication.eu10.hana.ondemand.com/oauth/token"
+	},
+	"serviceURL": "https://hyperledger-fabric.cfapps.eu10.hana.ondemand.com/api/v1/chaincodes/",
+	"entityCollection": [{
+		"name":"reading",
+		"chaincodeId": "af5d960e-fe22-46f3-b127-04c012944237-sap-icn-scp-bc-hl-odo-net-d052779-devx",
+		"chaincodeVersion": "/latest",
+		"methods": [{
+			"name": "addNewReading",
+			"type":"addNew",
+			"path": "/",
+			"httpMethod":"POST",
+			"successMessage": "Creation of new Reading successful"
+		}, {
+			"name": "readAllReadings",
+			"type":"readAll",
+			"path": "/",
+			"httpMethod":"GET",
+			"successMessage": "Retrieval of all Readings successful"
+		},{
+			"name": "readReading",
+			"type":"read",
+			"path": "/{id}",
+			"httpMethod":"GET",
+			"successMessage": "Read Reading successful"			
+		},{
+			"name": "updateReading",
+			"type":"update",
+			"path": "/",
+			"httpMethod":"PUT",
+			"successMessage": "Update of Reading successful"			
+		},{
+			"name": "removeAllReadings",
+			"type":"removeAll",
+			"path": "/",
+			"httpMethod":"DELETE",
+			"successMessage": "Removal of all Readings successful"			
+		}]		
+	}]
+}
